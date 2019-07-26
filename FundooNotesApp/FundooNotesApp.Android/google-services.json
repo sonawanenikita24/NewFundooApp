@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "51798496783",
+    "firebase_url": "https://user-9206e.firebaseio.com",
+    "project_id": "user-9206e",
+    "storage_bucket": "user-9206e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51798496783:android:a75f2124659ee482",
+        "android_client_info": {
+          "package_name": "com.companyname.FundooNotesApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "51798496783-ru0olhqorhvktcqevfi6m7nbr3fj6tf5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8ZWAZjLazGzlT6_qlODdkjC97NcUimcM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "51798496783-ru0olhqorhvktcqevfi6m7nbr3fj6tf5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
