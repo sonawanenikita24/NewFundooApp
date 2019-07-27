@@ -136,5 +136,19 @@ namespace FundooNotesApp.View
         {
            Navigation.PushAsync(new DisplayLabelToNote());
         }
+
+        /// <summary>
+        /// Application developers can override this method to provide behavior when the back button is pressed.
+        /// </summary>
+        /// <returns>
+        /// To be added.
+        /// </returns>
+        /// <remarks>
+        /// To be added.
+        /// </remarks>
+        protected override bool OnBackButtonPressed()
+        {
+            return base.OnBackButtonPressed();
+        }
     }
 }

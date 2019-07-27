@@ -249,7 +249,7 @@ namespace FundooNotesApp.View
             var uid = DependencyService.Get<IDatabaseInterface>().GetId();
 
             var allLabels = await this.LabelHelper.GetAllLabels();
-            //  var allnotesfromcollaborator = await CollaboratorRepo.GetAllcollaborators();
+            var allnotesfromcollaborator = await CollaboratorRepo.GetAllcollaborators();
             var index = -1;
 
             try
@@ -372,7 +372,7 @@ namespace FundooNotesApp.View
                             }
                         }
 
-                        /*   foreach(CollaboratorModelClass model in allnotesfromcollaborator)
+                           foreach(CollaboratorModelClass model in allnotesfromcollaborator)
                             {
                                if (model.Noteid.Equals(notedata.Key))
                                     {
@@ -389,6 +389,7 @@ namespace FundooNotesApp.View
                                             CornerRadius = 28,
                                             HeightRequest = 14,
                                             Content = labelname,
+                                            WidthRequest = 10,
                                             BorderColor = Color.Gray,
                                             BackgroundColor = Color.FromHex(FrameColorSetter.GetHexColor(notedata))
                                         };

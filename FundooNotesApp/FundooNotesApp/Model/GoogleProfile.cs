@@ -4,6 +4,8 @@
 // </copyright>
 // <creater name="Nikita Sonawane"/>
 //------------------------------------------------------------------------------------------------------------------
+using Xamarin.Forms;
+
 namespace FundooNotesApp.View
 {
     /// <summary>
@@ -173,7 +175,7 @@ namespace FundooNotesApp.View
     /// <summary>
     /// taking image url
     /// </summary>
-    public class Image
+   /* public class Image
     {
         /// <summary>
         /// Gets or sets the URL.
@@ -190,7 +192,8 @@ namespace FundooNotesApp.View
         ///   <c>true</c> if this instance is default; otherwise, <c>false</c>.
         /// </value>
         public bool IsDefault { get; set; }
-    }
+        public string Source { get; internal set; }
+    }*/
 
     /// <summary>
     /// cover photo

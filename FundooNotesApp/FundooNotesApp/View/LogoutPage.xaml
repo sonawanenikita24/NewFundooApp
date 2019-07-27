@@ -4,9 +4,7 @@
              x:Class="FundooNotesApp.View.LogoutPage">
     <ContentPage.Content>
         <StackLayout>
-
-            <Button x:Name="Logout" Text="Logout" Clicked="Logout_Clicked" />
-            
+            <Button x:Name="Logout" Text="Logout" WidthRequest="100" Clicked="Logout_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

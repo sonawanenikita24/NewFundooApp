@@ -301,7 +301,7 @@ namespace FundooNotesApp.View
                                 HeightRequest = 14,
                                 Content = labelname,
                                 BorderColor = Color.Gray,
-                                WidthRequest=5,
+                                WidthRequest=10,
                                 BackgroundColor = Color.Aqua
                             };
 
@@ -354,7 +354,8 @@ namespace FundooNotesApp.View
                 {
                     Title = TitleText.Text,
                     UserNote = NoteText.Text,
-                    NoteType = note.NoteType
+                    NoteType=note.NoteType,
+                    Uid = note.Uid
                 };
 
                 //// calling updated function to update edited note in database
@@ -379,27 +380,30 @@ namespace FundooNotesApp.View
         /// <remarks>
         /// To be added.
         /// </remarks>
-        protected override bool OnBackButtonPressed()
+        /*protected override bool OnBackButtonPressed()
         {
             if (Device.RuntimePlatform.Equals(Device.Android))
             {
                 var uid = DependencyService.Get<IDatabaseInterface>().GetId();
 
-                Note note = new Note()
+                //Note note = this.FirebaseHelperVar.GetUserNote(this.NoteKey);
+
+                Note notes = new Note()
                 {
                     Title = TitleText.Text,
-                    UserNote = NoteText.Text,                   
-                    LabelsList = Lists                    
+                    UserNote = NoteText.Text,
+                    NoteType = note.NoteType,
+                    Uid = note.Uid
                 };
 
-                var result = this.FirebaseHelperVar.UpdateUserNote(note, this.NoteKey);
+                var result = this.FirebaseHelperVar.UpdateUserNote(notes, this.NoteKey);
                 return base.OnBackButtonPressed();
             }
             else
             {
                 return false;
             }
-        }
+        }*/
 
         /// <summary>
         /// Called when [pin note clicked].

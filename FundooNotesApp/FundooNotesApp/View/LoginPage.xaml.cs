@@ -7,12 +7,11 @@
 namespace FundooNotesApp.View
 {    
     using System;
-    using System.Text.RegularExpressions;
-    using FundooNotesApp.Themes;
+    using System.Text.RegularExpressions;  
     using FundooNotesApp.Interface;
     using FundooNotesApp;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
+    using Xamarin.Forms.Xaml;    
 
     /// <summary>
     /// login using user name and password 
@@ -36,6 +35,19 @@ namespace FundooNotesApp.View
         /// </summary>
         public LoginPage()
         {
+            /* //// checking for user is already sign in 
+             var user = DependencyService.Get<IDatabaseInterface>().GetId();
+
+             if(user!=null)
+             {
+                 Navigation.PushModalAsync(new Dashboard());
+             }
+             else
+             {
+                 this.InitializeComponent();
+                 themePicker.SelectedIndexChanged += ThemePicker_SelectedIndexChanged;
+             }*/
+
             this.InitializeComponent();
             themePicker.SelectedIndexChanged += ThemePicker_SelectedIndexChanged;
         }
@@ -111,8 +123,22 @@ namespace FundooNotesApp.View
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Image_button_clicked(object sender, EventArgs e)
         {
-            //// eye image button clicked
+            Tapcount++;
+            var imagesender = (Image)sender;
+            if ( Tapcount % 2 == 0 )
+            {
+                imagesender.Source = "hide_image.png";
+                Password.IsPassword = true;
+            }
+            else
+            {
+                imagesender.Source = "show_image.jpg";
+                Password.IsPassword = false;
+            }
+
+            return;
         }
+        
 
         /// <summary>
         /// Handles the Clicked event of the Forgot_button control.

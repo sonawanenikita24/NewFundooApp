@@ -30,7 +30,7 @@ namespace FundooNotesApp.View.PopUp
         /// <summary>
         /// note key
         /// </summary>
-        private string noteKey;       
+        private string noteKey;
 
         /// <summary>
         /// instance of firebase helper class to access database
@@ -54,7 +54,7 @@ namespace FundooNotesApp.View.PopUp
         /// <value>
         /// The firebase helper.
         /// </value>
-       public NotesRepository FirebaseHelper
+        public NotesRepository FirebaseHelper
         {
             get
             {
@@ -125,6 +125,6 @@ namespace FundooNotesApp.View.PopUp
             {
                 Console.WriteLine(ex.Message);
             }
-        }        
+        }
     }
 }

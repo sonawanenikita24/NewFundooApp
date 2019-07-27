@@ -229,5 +229,14 @@ namespace FundooNotesApp.View
                 Console.WriteLine(ex.Message);
             }
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            DisplayAlert("Alert", "Please logout first from app", "Ok");
+
+            ////go to Edit page with that note id
+            Navigation.PushAsync(new LogoutPage());
+            return base.OnBackButtonPressed();
+        }
     }
 }

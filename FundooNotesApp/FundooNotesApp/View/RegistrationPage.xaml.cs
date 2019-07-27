@@ -183,20 +183,20 @@ namespace FundooNotesApp.View
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Image_button_clicked(object sender, EventArgs e)
         {
-            /* this.TapCount++;
-             var imagesender = (Image)sender;
-             if (this.TapCount % 2 == 0)
-             {
-                 imagesender.Source="hide_image.png
-                 Password.IsPassword = true;
-             }
-             else
-             {
-                 imagesender.Source = "show_image.jpg";
-                 Password.IsPassword = false;
-             }
+            TapCount++;
+            var imagesender = (Image)sender;
+            if (TapCount % 2 == 0)
+            {
+                imagesender.Source = "hide_image.png";
+                Password.IsPassword = true;
+            }
+            else
+            {
+                imagesender.Source = "show_image.jpg";
+                Password.IsPassword = false;
+            }
 
-             return;*/
+            return;
         }
 
         /// <summary>

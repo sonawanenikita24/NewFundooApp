@@ -34,10 +34,13 @@ namespace FundooNotesApp.View
         protected override void OnAppearing()
         {
             base.OnAppearing();
-           // DependencyService.Get<IDatabaseInterface>().LogoutWithFirebaseAuth();
-           // Navigation.PushModalAsync(new LoginPage());
         }
 
+        /// <summary>
+        /// Handles the Clicked event of the Logout control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
         private void Logout_Clicked(object sender, System.EventArgs e)
         {
             DependencyService.Get<IDatabaseInterface>().LogoutWithFirebaseAuth();

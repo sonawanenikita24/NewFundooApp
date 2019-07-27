@@ -72,6 +72,19 @@ namespace FundooNotesApp.View
          private void PlaceButton_clicked(object sender, EventArgs e)
          {
              //// code
-         }     
+         }
+
+        /// <summary>
+        /// Called when [back button pressed].
+        /// </summary>
+        /// <returns></returns>
+        protected override bool OnBackButtonPressed()
+        {
+            DisplayAlert("Alert", "Please logout first from app", "Ok");
+
+            ////go to Edit page with that note id
+            Navigation.PushAsync(new LogoutPage());
+            return base.OnBackButtonPressed();
+        }
     }
 }

@@ -44,5 +44,23 @@ namespace FundooNotesApp.View
         {
             Navigation.PushAsync(new PieChartExample());
         }
+
+        /// <summary>
+        /// Application developers can override this method to provide behavior when the back button is pressed.
+        /// </summary>
+        /// <returns>
+        /// To be added.
+        /// </returns>
+        /// <remarks>
+        /// To be added.
+        /// </remarks>
+        protected override bool OnBackButtonPressed()
+        {
+            DisplayAlert("Alert", "Please logout first from app", "Ok");
+
+            ////go to Edit page with that note id
+            Navigation.PushAsync(new LogoutPage());
+            return base.OnBackButtonPressed();
+        }
     }
 }

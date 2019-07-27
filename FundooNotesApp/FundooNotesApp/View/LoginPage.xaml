@@ -34,16 +34,19 @@
 
                                 <Entry x:Name="Password" Placeholder="Password" WidthRequest="250" PlaceholderColor="DarkGray" IsPassword="True" />
 
-                                <Image Source="hide_image.png" HorizontalOptions="End" Margin="0,0,20,0" HeightRequest="50" WidthRequest="50">
+                                <Image Source="hide_image.png" HorizontalOptions="End" Margin="0,0,5,0" WidthRequest="30" HeightRequest="30">
                                     <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="Image_button_clicked"
-                                      NumberOfTapsRequired="1" />
+                                        <TapGestureRecognizer
+                                            Tapped="Image_button_clicked"
+                                            NumberOfTapsRequired="1"/>
                                     </Image.GestureRecognizers>
                                 </Image>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
                 </StackLayout>
+                
+                
 
                 <StackLayout HorizontalOptions="Center">
                     <AbsoluteLayout>
@@ -57,7 +60,7 @@
                     </AbsoluteLayout>
                 </StackLayout>
 
-                <StackLayout Margin="12,0,0,0" BackgroundColor="White" HorizontalOptions="Start" Orientation="Horizontal" Spacing="100">
+                <StackLayout Margin="12,0,0,0" BackgroundColor="White" HorizontalOptions="Start" Orientation="Horizontal" Spacing="10">
                     <Label HorizontalOptions="Start" VerticalOptions="Center" VerticalTextAlignment="Center" FontSize="18" FontAttributes="Bold">
                         <Label.FormattedText>
                             <FormattedString>
@@ -75,43 +78,43 @@
                 </StackLayout>
 
 
-                <StackLayout Margin="10,10,0,10" BackgroundColor="White" Orientation="Horizontal" >
-                    <StackLayout>
-                        <Label VerticalOptions="Start"
-               HorizontalOptions="Start"
-            FontSize="16">
-
+                <StackLayout Margin="10,10,10,10" BackgroundColor="White" Orientation="Horizontal">
+                  
+                        <Label VerticalOptions="Center"
+                               HorizontalOptions="Start"
+                         FontSize="16">
                             <Label.FormattedText>
                                 <FormattedString>
                                     <Span Text="Create account"
-                      TextColor="Blue">
-
+                                           TextColor="Blue">
                                         <Span.GestureRecognizers>
                                             <TapGestureRecognizer
-              Tapped="Create_button_Clicked"/>
+                                              Tapped="Create_button_Clicked"/>
                                         </Span.GestureRecognizers>
                                     </Span>
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                    </StackLayout>
+                  
 
                     <Button x:Name="Submit"
-              Text="Login"
-              WidthRequest="100"
-              BorderColor="Black"
-              BackgroundColor="Blue"
-              TextColor="White"
-              Clicked="Login_button_clicked"
-              HorizontalOptions="End"
-            Style="{DynamicResource ButtonSecondary}"/>
+                              Text="Login"
+                              WidthRequest="100"
+                              BorderColor="Black"
+                              BackgroundColor="Blue"
+                              TextColor="White"
+                              Clicked="Login_button_clicked"
+                              HorizontalOptions="End"
+                              Style="{DynamicResource ButtonSecondary}"/>
                 </StackLayout>
+               
                 <StackLayout>
                     <Button
-            Text="Google"
-            Clicked="Google_Login_clicked"
-             ImageSource="google.png"
-              HeightRequest="50" />
+                        Text="Google"
+                        Clicked="Google_Login_clicked"
+                         ImageSource="google.png"
+                         HeightRequest="50"
+                         WidthRequest="100"/>     
                 </StackLayout>
 
             </StackLayout>
@@ -130,47 +133,3 @@
         </StackLayout>
     </ScrollView>
 </ContentPage>
-
-
-<!--  <StackLayout>
-                    <Button x:Name="BtnClick"
-                        BackgroundColor="Navy" 
-                        Text="log in" 
-                        TextColor="White"
-                        HeightRequest="46" 
-                        BorderRadius="23" 
-                        Clicked="Login_button_clicked"  >
-                    </Button>
-                    <Button BackgroundColor="Purple" 
-                        Text="Register" 
-                        TextColor="White" 
-                        HeightRequest="46"
-                        BorderRadius="23" 
-                        Clicked="Create_button_Clicked"/>
-                    <Button Text="Forgot password" 
-                        TextColor="White" 
-                        BackgroundColor="DarkGreen"  
-                        HeightRequest="46" 
-                        BorderRadius="23" 
-                        Clicked="Forgot_button_Clicked"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal" 
-                         HorizontalOptions="Center">
-                    <ImageButton Source="Face_logo" 
-                             WidthRequest="80" 
-                             HeightRequest="40" 
-                             BackgroundColor="White"/>
-                    <ImageButton Source="Instagram"
-                             WidthRequest="80" 
-                             HeightRequest="40" 
-                             BackgroundColor="White"/>
-                    <ImageButton Source="google" 
-                             WidthRequest="80" 
-                             HeightRequest="40"
-                             BackgroundColor="White"
-                             Clicked="Google_Login_clicked"/>
-                </StackLayout>
-            </StackLayout>
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>  -->

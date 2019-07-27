@@ -154,9 +154,6 @@ namespace FundooNotesApp.Repository
         {
             try
             {
-                //// get current user id
-                var userid = DependencyService.Get<IDatabaseInterface>().GetId();
-
                     await this.Firebase.Child("Notes").Child("UserNotes").Child(key).PutAsync<Note>(new Note()
                     {
                         Title = note.Title,
@@ -164,7 +161,7 @@ namespace FundooNotesApp.Repository
                         NoteType = note.NoteType,
                         NoteColor = note.NoteColor,
                         LabelsList = note.LabelsList,
-                        Uid =userid                        
+                        Uid = note.Uid                        
                     });
                 
             }
